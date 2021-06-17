@@ -2,10 +2,10 @@
 Evaluate the trained network
 '''
 import numpy as np
-from keras.models import Model
+from tensorflow.keras.models import Model
 #from spatial_deformer_net3d import SpatialDeformer3D
 from architecture import SDN_incept as SDN
-from keras.layers import Input
+from tensorflow.keras.layers import Input
 from Utils import Dice
 #import os
 #import tensorflow as tf

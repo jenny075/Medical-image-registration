@@ -13,7 +13,7 @@ It learns a proper affine transformation in 3D
 """
 
 
-from keras.layers.core import Layer
+from tensorflow.keras.layers.core import Layer
 import tensorflow as tf
 
 class SpatialTransformer(Layer):
@@ -26,7 +26,7 @@ class SpatialTransformer(Layer):
             Max Jaderberg, Karen Simonyan, Andrew Zisserman, Koray Kavukcuoglu
             Submitted on 5 Jun 2015
     .. [2]  https://github.com/skaae/transformer_network/blob/master/transformerlayer.py
-    .. [3]  https://github.com/EderSantana/seya/blob/keras1/seya/layers/attention.py
+    .. [3]  https://github.com/EderSantana/seya/blob/tensorflow.keras1/seya/layers/attention.py
     """
 
     def __init__(self,

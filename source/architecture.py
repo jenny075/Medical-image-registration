@@ -3,9 +3,9 @@ Architectures for producing the displacement field
 '''
 #from keras.models import Model
 #from spatial_deformer_net3d import SpatialDeformer3D
-from keras.layers import Input, Conv3D, MaxPooling3D, AveragePooling3D, UpSampling3D, multiply, Conv3DTranspose, ZeroPadding3D, Cropping3D, PReLU, concatenate, add, GaussianNoise, LeakyReLU, Lambda
+from tensorflow.keras.layers import Input, Conv3D, MaxPooling3D, AveragePooling3D, UpSampling3D, multiply, Conv3DTranspose, ZeroPadding3D, Cropping3D, PReLU, concatenate, add, GaussianNoise, LeakyReLU, Lambda
 #import keras.backend as K
-from keras.initializers import RandomNormal
+from tensorflow.keras.initializers import RandomNormal
 import tensorflow as tf
 
 par = {

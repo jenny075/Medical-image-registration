@@ -81,17 +81,17 @@ def vol_generator2(path, file_list, batch_size):
             
 # Training
 from spatial_deformer_net3d import SpatialDeformer3D
-from keras.models import Model
-from keras.layers import Input
-from keras.optimizers import Adam
-#from keras.losses import binary_crossentropy, kullback_leibler_divergence
-#import keras.backend as K
-#from keras.regularizers import l1, l2
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input
+from tensorflow.keras.optimizers import Adam
+#from tensorflow.keras.losses import binary_crossentropy, kullback_leibler_divergence
+#import tensorflow.keras.backend as K
+#from tensorflow.keras.regularizers import l1, l2
 #import tensorflow as tf
 
   
 from architecture import SDN_incept as SDN
-#from keras.layers import GaussianNoise
+#from tensorflow.keras.layers import GaussianNoise
 inputs = Input(shape = input_shape)
 #aug = GaussianNoise(0.05)(inputs)
 disp_M = Model(inputs, SDN(inputs))
@@ -130,7 +130,7 @@ for ind in combinations(range(0,len(val_files),1),2):
 gen_train = vol_generator2(datapath, train_list, batch_size)
 gen_test = vol_generator2(datapath, validation_list, batch_size)
 
-#from keras.callbacks import ModelCheckpoint
+#from tensorflow.keras.callbacks import ModelCheckpoint
 #mc = ModelCheckpoint(outpath+'SDN3d_weights_TVS16_{epoch:02d}.h5', save_weights_only=True, verbose=1, period=5)
 
 history = sdn.fit_generator(gen_train, steps_per_epoch = len(train_list)/batch_size, epochs = epochs, use_multiprocessing = True, verbose=1, validation_data = gen_test, validation_steps = len(validation_list)/batch_size)

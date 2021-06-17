@@ -66,11 +66,11 @@ def vol_generator2(path, file_list, batch_size):
 
 # Training
 #from spatial_deformer_net3d import SpatialDeformer3D
-from keras.models import Model
-from keras.layers import Input, Conv3D, MaxPooling3D,  UpSampling3D, multiply, Conv3DTranspose, ZeroPadding3D, Cropping3D, concatenate,BatchNormalization, LeakyReLU, Lambda, PReLU, Add
-from keras.optimizers import Adam
-import keras.backend as K
-from keras.initializers import RandomNormal
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Conv3D, MaxPooling3D,  UpSampling3D, multiply, Conv3DTranspose, ZeroPadding3D, Cropping3D, concatenate,BatchNormalization, LeakyReLU, Lambda, PReLU, Add
+from tensorflow.keras.optimizers import Adam
+import tensorflow.keras.backend as K
+from tensorflow.keras.initializers import RandomNormal
 import losses
 from dense_3D_spatial_transformer import Dense3DSpatialTransformer
 def myConv(x_in, nf, strides=1):

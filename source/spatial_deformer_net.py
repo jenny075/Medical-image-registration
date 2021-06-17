@@ -9,7 +9,7 @@ Modify the STN module so the transformation is done by displacement field
 instead of the original affine transformation.
 """
 
-from keras.layers.core import Layer
+from tensorflow.keras.layers.core import Layer
 import tensorflow as tf
 
 

@@ -7,7 +7,7 @@ Created on Wed Mar  7 15:13:36 2018
 A 3d version of spatial deformer network
 """
 
-from keras.layers.core import Layer
+from tensorflow.keras.layers.core import Layer
 import tensorflow as tf
 
 
